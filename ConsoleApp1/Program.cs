@@ -8,17 +8,21 @@
     
     static void Main(string[] args)
     {
-        for (int i = 1; i <= 15; i++)
+        bool threeDiv = false;
+        bool fiveDiv = false;
+        for (int i = 1; i <= 100; i++)
         {
-            if ((i % 5) == 0 && (i % 3) == 0)
+            threeDiv = (i % 3) == 0;
+            fiveDiv = (i % 5) == 0;
+            if (fiveDiv &&  threeDiv)
             {
                 Console.WriteLine("FizzBuzz");
             }
-            else if((i % 3) == 0)
+            else if(threeDiv)
             {
                 Console.WriteLine("Fizz");
             }
-            else if((i % 5)== 0)
+            else if(fiveDiv)
             {
                 Console.WriteLine("Buzz");
             }
